@@ -1492,10 +1492,14 @@
   .stage .nav,
   .stage .brand,
   .stage .brand-name { color: #FFFFFF; }
+  /* Get access keeps the original navbar purple */
   .stage .nav-cta {
-    background: #111111;
-    color: #FFFFFF;
+    background: var(--navbar-bg);
+    color: var(--ink);
     border-color: transparent;
+  }
+  .stage .nav-cta:hover {
+    background: color-mix(in srgb, var(--navbar-bg) 88%, var(--ink));
   }
 
   .stage-copy {
