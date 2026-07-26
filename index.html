@@ -1532,11 +1532,20 @@
     box-shadow: 0 1px 3px rgba(90, 20, 40, 0.10);
   }
   .stage .hero-label span { color: #1A1A1A; }
-  .stage .hero-cta {
-    background: #111111;
-    color: #FFFFFF;
+  /* beta CTAs match the nav — same navbar purple, both themes */
+  .cta {
+    background: var(--navbar-bg);
+    color: var(--ink);
   }
-  .stage .hero-cta:hover { background: #262626; }
+  .cta:hover {
+    background: color-mix(in srgb, var(--navbar-bg) 88%, var(--ink));
+  }
+  .cta .cta-arrow,
+  .cta .locked-cta-lock {
+    background: color-mix(in srgb, var(--navbar-bg) 62%, var(--ink));
+  }
+  .cta .cta-arrow svg { color: var(--navbar-bg); }
+  .cta .locked-cta-lock svg { color: var(--navbar-bg); }
 
   /* copy rises in once the gradient has painted */
   .stage .hero-label,
