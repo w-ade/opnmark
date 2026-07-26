@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#2B2144"/>
+  <defs>
+    <linearGradient id="hero" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FB7B47"/>
+      <stop offset="8%"   stop-color="#FC8352"/>
+      <stop offset="16%"  stop-color="#FB7E61"/>
+      <stop offset="24%"  stop-color="#F96C5E"/>
+      <stop offset="32%"  stop-color="#F55E5A"/>
+      <stop offset="40%"  stop-color="#EF535C"/>
+      <stop offset="48%"  stop-color="#E74672"/>
+      <stop offset="56%"  stop-color="#DB4490"/>
+      <stop offset="64%"  stop-color="#D456B5"/>
+      <stop offset="72%"  stop-color="#D27ED3"/>
+      <stop offset="80%"  stop-color="#D0B7EA"/>
+      <stop offset="88%"  stop-color="#E9E5F5"/>
+      <stop offset="94%"  stop-color="#F5F2F8"/>
+      <stop offset="100%" stop-color="#FCFCFC"/>
+    </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="4" stitchTiles="stitch"/>
+    </filter>
+    <linearGradient id="grainfade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="98%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="grainmask">
+      <rect width="1200" height="630" fill="url(#grainfade)"/>
+    </mask>
+  </defs>
+  <rect width="1200" height="630" fill="url(#hero)"/>
+  <g opacity="0.55" style="mix-blend-mode:overlay">
+    <rect width="1200" height="630" filter="url(#grain)"/>
+  </g>
   <g transform="translate(460.00 179.43) scale(0.492091)">
     <path d="M257.667 368.116C254.214 362.082 258.913 354.918 265.866 354.918C274.937 354.92 284.865 354.702 291.737 354.708C318.825 354.598 345.914 354.666 373.001 354.91C378.049 354.956 382.112 359.065 382.109 364.113L382.011 525.709C382.011 530.793 382.114 536.694 382.02 542.269C381.943 546.845 378.306 550.477 373.73 550.599C364.888 550.836 355.171 550.649 346.973 550.649L290.339 550.626C258.426 550.615 225.147 551.127 193.203 550.739C189.745 550.697 187.133 548.566 186.947 545.113C186.047 528.367 186.365 479.269 186.369 461.336C186.37 458.002 188.139 454.935 191.028 453.271L244.62 422.402C252.639 417.81 261.852 412.808 270.254 407.83C274.587 405.262 275.856 399.641 273.304 395.299C269.654 389.088 266.06 382.665 262.566 376.589C261.105 374.047 259.39 371.129 257.667 368.116Z" fill="#FFFFFF"/>
     <path d="M75.384 282.448C77.1958 281.493 79.2652 281.33 81.0892 282.261C86.8252 285.19 98.3673 292.266 101.293 293.865C121.514 304.916 142.274 318.211 162.59 329.479C166.831 331.831 172.084 330.36 174.482 326.145C180.272 315.966 189.597 299.335 194.926 291.342C196.854 288.45 200.105 288.347 201.831 291.363C202.589 292.685 203.269 293.991 203.757 294.821L216.749 316.961L263.487 398.045C263.746 398.495 263.649 399.064 263.257 399.403C242.673 413.157 220.029 424.415 198.823 437.258C192.614 441.018 186.6 444.376 180.51 447.728L125.328 479.519C119.044 483.125 110.332 487.835 102.906 492.26C98.4333 494.926 92.5381 493.698 89.8775 489.223C84.5697 480.294 79.1938 470.528 74.3021 462.033L37.1758 397.513L11.396 352.846C8.55482 347.925 4.43905 341.147 1.06116 335.046C-1.28834 330.802 0.419696 325.59 4.64642 323.21C21.3811 313.787 38.0705 303.449 54.7796 294.188C61.4071 290.515 68.558 286.046 75.384 282.448Z" fill="#FFFFFF"/>
